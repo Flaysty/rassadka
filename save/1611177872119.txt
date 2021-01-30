@@ -1,0 +1,568 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.remove_tbl').click(function () {
+            $(this).closest('.new_table').remove();
+        });
+    });
+</script>
+
+<div id="work_place" class="ui-draggable ui-draggable-handle ui-resizable" style="position: relative; left: 28px; top: 42px; width: 100%; height: 100%; transform: scale(0.694444, 0.694444); background-color: rgb(236, 203, 179);">
+    <div class="vin" id="v1">
+        <div class="left_top"></div>
+        <div class="top"></div>
+        <div class="right_top"></div>
+        <div class="left_bottom"></div>
+        <div class="bottom"></div>
+        <div class="right_bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div id="center_aling">
+
+
+        <!-- <div class="new_table table rect rect_x18">
+            <img src="images/tables/rect_x18.png">
+            <div class="stul_guest top1">
+                <div class="input_out">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png">
+            </div>
+            <div class="stul_guest top2">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png">
+            </div>
+            <div class="stul_guest bottom1">
+                <div class="input_out">
+                    <div class="input" style="transform: rotate(180deg);">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png">
+            </div>
+            <div class="stul_guest bottom2">
+                <div class="input_out">
+                    <div class="input" style="transform: rotate(180deg);">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png">
+            </div>
+            
+
+
+
+
+
+            <div class="stul_guest s1">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s2">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s3">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s4">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s5">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s6">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s7">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s8">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s9">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s10">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s11">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s12">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s13">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s14">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s15">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s16">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s17">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+            <div class="stul_guest s18">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(90deg);">
+            </div>
+
+
+            
+
+            <div class="stul_guest s19">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s20">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s21">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s22">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s23">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s24">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s25">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s26">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s27">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s28">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s29">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s30">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s31">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s32">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s33">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s34">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s35">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+            <div class="stul_guest s36">
+                <div class="input_out">
+                    <div class="input">
+                        <input type="text" value="Фамилия Имя" class="input_name">
+                        <input type="text" value="Отчество" class="input_family">
+                    </div>
+                </div>
+                <img src="images/tables/chair.png" style="transform: rotate(270deg);">
+            </div>
+
+        </div> -->
+
+
+        <!-- <div class="new_table mg_table ui-resizable ui-draggable ui-draggable-handle" style="left: 5px; top: -214px;">
+            <div class="remove_tbl"></div>
+            <div class="input_out input_out_muj">
+                <div class="input"><input type="text" placeholder="Жених" class="input_name"></div>
+            </div>
+            <div class="input_out input_out_jen">
+                <div class="input"><input type="text" placeholder="Невеста" class="input_name"></div>
+            </div><img src="images/mg.png">
+            <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;">
+            </div>
+        </div>
+        <div class="new_table guest_table ui-resizable ui-draggable ui-draggable-handle" data-id="1"
+            style="left: -522px; top: 164px;">
+            <div class="remove_tbl"></div>
+            <div class="num_table">1</div><img src="images/stol.png">
+            <div class="stul_guest" style="transform: rotate(90deg);">
+                <div class="input_out" style="transform: rotate(270deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(180deg);">
+                <div class="input_out" style="transform: rotate(180deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(270deg);">
+                <div class="input_out" style="transform: rotate(90deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(360deg);">
+                <div class="input_out" style="transform: rotate(0deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;">
+            </div>
+        </div>
+        <div class="new_table guest_table ui-resizable ui-draggable ui-draggable-handle" data-id="2"
+            style="left: 22px; top: 245px;">
+            <div class="remove_tbl"></div>
+            <div class="num_table">2</div><img src="images/stol.png">
+            <div class="stul_guest" style="transform: rotate(60deg);">
+                <div class="input_out" style="transform: rotate(300deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(120deg);">
+                <div class="input_out" style="transform: rotate(240deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(180deg);">
+                <div class="input_out" style="transform: rotate(180deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(240deg);">
+                <div class="input_out" style="transform: rotate(120deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(300deg);">
+                <div class="input_out" style="transform: rotate(60deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(360deg);">
+                <div class="input_out" style="transform: rotate(0deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;">
+            </div>
+        </div>
+        <div class="new_table guest_table ui-resizable ui-draggable ui-draggable-handle" data-id="3"
+            style="left: 573px; top: 154px;">
+            <div class="remove_tbl"></div>
+            <div class="num_table">3</div><img src="images/stol.png">
+            <div class="stul_guest" style="transform: rotate(45deg);">
+                <div class="input_out" style="transform: rotate(315deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(90deg);">
+                <div class="input_out" style="transform: rotate(270deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(135deg);">
+                <div class="input_out" style="transform: rotate(225deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(180deg);">
+                <div class="input_out" style="transform: rotate(180deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(225deg);">
+                <div class="input_out" style="transform: rotate(135deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(270deg);">
+                <div class="input_out" style="transform: rotate(90deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(315deg);">
+                <div class="input_out" style="transform: rotate(45deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="stul_guest" style="transform: rotate(360deg);">
+                <div class="input_out" style="transform: rotate(0deg);">
+                    <div class="input"><input type="text" value="Фамилия Имя" class="input_name"><input type="text"
+                            value="Отчество" class="input_family"></div>
+                </div><img src="images/stul.png">
+            </div>
+            <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;">
+            </div>
+        </div> -->
+    
+        
+    
+        
+    
+        
+    
+        
+    
+            
+        </div>
+
+
+
+
+
+
+
+    
+    
+    
+<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div>

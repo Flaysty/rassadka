@@ -1,0 +1,385 @@
+<html lang="ru-RU">
+
+<head>
+    <title>Рассадка на свадьбе
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/main_new.css" media="all" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/canvas2image.js"></script>
+    <script type="text/javascript" src="js/printThis.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(66751294, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/66751294" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176427613-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176427613-1');
+</script>
+    <div id="canvas"></div>
+    <div id="header">
+        <div id="faq">
+            ?
+        </div>
+        <h3>Рассадка на свадьбе</h3>
+    </div>
+    <div id="helper_out_out" class="flex_out_out">
+    <div id="helper_out" class="flex_out">
+        <div id="helper_in" class="flex_in">
+            <div id="helper_close" class="close_btn">
+                <i class="mdi mdi-close"></i>
+            </div>
+            <h4>Помощь</h4>
+            <ul>
+                <li>
+                    <img src="/images/plus.png">
+                    <p>Для добавления нового элемента на план.</p>
+                </li>
+                <li>
+                    <img src="/images/set.png">
+                    <p>Редактирование всех элементов на плане. Смена фонового изображения</p>
+                </li>
+                <li>
+                    <img src="/images/save.png">
+                    <p>Возможность сохранить, распечатать, поделиться получившимся результатом</p>
+                </li>
+                <li>
+                    <img src="/images/del.png">
+                    <p>Удаление плана. Очиста рабочей области.</p>
+                </li>
+                <!--<li>-->
+                <!--    <img src="/images/dclick.png">-->
+                <!--    <p>Двойной клик на элемент - редактирование элемента</p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+    </div>
+    <main id="main_work_screen">
+        <div id="work_place">
+        
+    </div>
+    </main>
+    <div id="add_out_out" class="flex_out_out">
+    <div id="add_new_out" class="flex_out">
+        <div id="add_new_in" class="flex_in">
+            <div id="add_new_close" class="close_btn">
+                <i class="mdi mdi-close"></i>
+            </div>
+            <h4>Добавление элемента</h4>
+            <div id="persone" class="one_persone">
+                <input id="names_list" type="text" placeholder="Введите имя">
+            </div>
+            <div class="row" id="styles_elem">
+            <div class="col s6">
+                <p>Фон</p>
+                <div id="bg_style_elem">
+                    <select>
+                        <option value="transparent" selected>Без цвета</option>
+                        <option value="#ffffff" selected>Белый</option>
+                        <option value="#000000">Черный</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Текст</p>
+                <div id="font_style_elem">
+                    <select>
+                        <option value="#000000" selected>Черный</option>
+                        <option value="#ffffff">Белый</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Край</p>
+                <div id="border_style_elem">
+                    <select>
+                        <option value="transparent" selected>Без цвета</option>
+                        <option value="#000000">Черный</option>
+                        <option value="#ffffff">Белый</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Шрифт</p>
+                <div id="font_size_elem">
+                    <select>
+                        <option value="6px">6px</option>
+                        <option value="8px">8px</option>
+                        <option value="10px" selected>10px</option>
+                        <option value="12px">12px</option>
+                        <option value="14px">14px</option>
+                        <option value="16px">16px</option>
+                        <option value="18px">18px</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+            <div id="add_more">
+                <button id="add_more_btn">Добавить</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="red_out_out" class="flex_out_out">
+    <div id="red_out" class="flex_out">
+        <div id="red_in" class="flex_in">
+            <div id="red_close" class="close_btn">
+                <i class="mdi mdi-close"></i>
+            </div>
+            <h4>Редактирование элемента</h4>
+            <div id="persone_red" class="one_persone">
+                <input id="names_list_red" type="text" placeholder="Введите имя">
+            </div>
+            <div class="row" id="styles_elem_red">
+            <div class="col s6">
+                <p>Фон</p>
+                <div id="bg_style_elem_red">
+                    <select>
+                        <option value="transparent" selected>Без цвета</option>
+                        <option value="#ffffff" selected>Белый</option>
+                        <option value="#000000">Черный</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Текст</p>
+                <div id="font_style_elem_red">
+                    <select>
+                        <option value="#000000" selected>Черный</option>
+                        <option value="#ffffff">Белый</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Край</p>
+                <div id="border_style_elem_red">
+                    <select>
+                        <option value="transparent" selected>Без цвета</option>
+                        <option value="#000000">Черный</option>
+                        <option value="#ffffff">Белый</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Шрифт</p>
+                <div id="font_size_elem_red">
+                    <select>
+                        <option value="6px">6px</option>
+                        <option value="8px">8px</option>
+                        <option value="10px" selected>10px</option>
+                        <option value="12px">12px</option>
+                        <option value="14px">14px</option>
+                        <option value="16px">16px</option>
+                        <option value="18px">18px</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+            <div id="red_more">
+                <button id="red_more_btn">Применить</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="set_out_out" class="flex_out_out">
+    <div id="set_out" class="flex_out">
+        <div id="set_in" class="flex_in">
+            <div id="set_close" class="close_btn">
+                <i class="mdi mdi-close"></i>
+            </div>
+            <h4>Настройка проекта</h4>
+            <div id="set_in_in">
+                <div class="row">
+                    <div class="col s12">
+                        <div id="download_map">
+            <input type="file" id="profile_pic" name="profile_pic" accept=".jpg, .jpeg, .png" class="input-file">
+            <label for="profile_pic" class="btn btn-tertiary js-labelFile">
+                <i class="mdi mdi-upload"></i>
+                <span class="js-fileName">Загрузить файл</span>
+            </label>
+        </div>
+                    </div>
+                </div>
+                        
+        <div class="row" id="styles">
+            <div class="col s6">
+                <p>Фон</p>
+                <div id="bg_style">
+                    <select>
+                        <option value="transparent">Без цвета</option>
+                        <option value="#ffffff" selected>Белый</option>
+                        <option value="#000000">Черный</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Текст</p>
+                <div id="font_style">
+                    <select>
+                        <option value="#000000" selected>Черный</option>
+                        <option value="#ffffff">Белый</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Край</p>
+                <div id="border_style">
+                    <select>
+                        <option value="transparent" selected>Без цвета</option>
+                        <option value="#000000">Черный</option>
+                        <option value="#ffffff">Белый</option>
+                        <option value="#16a085">Зеленый</option>
+                        <option value="#c0392b">Красный</option>
+                        <option value="#2980b9">Синий</option>
+                        <option value="#f1c40f">Желтый</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col s6">
+                <p>Шрифт</p>
+                <div id="font_size">
+                    <select>
+                        <option value="6px">6px</option>
+                        <option value="8px">8px</option>
+                        <option value="10px" selected>10px</option>
+                        <option value="12px">12px</option>
+                        <option value="14px">14px</option>
+                        <option value="16px">16px</option>
+                        <option value="18px">18px</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="save_set">
+                <button id="save_set_btn">Применить</button>
+            </div>
+            <div id="save_set_all">
+                <button id="save_set_all_btn">Применить ко всем</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="save_out_out" class="flex_out_out">
+    <div id="save_out" class="flex_out">
+        <div id="save_in" class="flex_in">
+            <div id="save_close" class="close_btn">
+                <i class="mdi mdi-close"></i>
+            </div>
+            <h4>Сохранение</h4>
+            <button id="save">Сохранить <i class="mdi mdi-floppy"></i></button>
+        <button id="print">Печать <i class="mdi mdi-printer"></i></button>
+        <form id="save_a_sand">
+            <input id="save_to_send_input" name="save_to_send_input" type="hidden">
+            <input id="save_to_send_text" name="save_to_send_text" type="hidden">
+            <button id="save_to_send" type="submit">Поделиться <i class="mdi mdi-arrow-right-bold-circle-outline"></i></button>
+        </form>
+        </div>
+    </div>
+    </div>
+    <div id="podel_out_out" class="flex_out_out">
+    <div id="podel_out" class="flex_out">
+        <div id="podel_in" class="flex_in">
+            <div id="podel_close" class="close_btn">
+                <i class="mdi mdi-close"></i>
+            </div>
+            <h4>Ссылка</h4>
+            <p>Скопируйте ссылку, чтобы поделиться с друзьями картой.</p>
+            <div>
+                        <!--<button id="copy_url"><i class="mdi mdi-content-copy"></i></button>-->
+
+            <input type="text" id="urla" disabled>
+            </div>
+            </div>
+            </div>
+            </div>
+    <div id="footer">
+        <div class="one_footer_btn">
+            <div id="add_new">
+                +
+            </div>
+        </div>
+        <div class="one_footer_btn">
+            <div id="prefs">
+                <i class="mdi mdi-settings"></i>
+            </div>
+        </div>
+        <div class="one_footer_btn">
+            <div id="save_btns">
+                <i class="mdi mdi-content-save"></i>
+            </div>
+        </div>
+        <div class="one_footer_btn">
+            <div id="footer_delete">
+                <div id="remove_map">
+                <i class="mdi mdi-delete"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

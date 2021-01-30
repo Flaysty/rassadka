@@ -1,0 +1,25 @@
+<div id="pic_drag" class="ui-draggable ui-draggable-handle" style="position: relative; left: -48px; top: 6px;">
+            <div class="ui-wrapper" style="overflow: hidden; position: relative; width: 630.924px; height: 639px; top: 0px; left: 0px; margin: 0px;">
+                <div class="ui-wrapper" style="overflow: hidden; position: static; width: 631px; height: 639px; top: auto; left: auto; margin: 0px;">
+                    <img src="https://placernew.inclu.work/1.jpg" class="ui-resizable" style="margin: 0px; resize: none; position: static; zoom: 1; display: block; height: 639px; width: 631px;">
+                    <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;">
+                    </div>
+                    <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;">
+                    </div>
+                    <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;">
+                    </div>
+                </div>
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 159px;left: 180.297px;">Иванов<br>М.К.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 134px; left: 305.141px;">Петров<br>П.Г.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 157px; left: 429.922px;">Сидоров<br>Н.В.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 236px; left: 485.75px;">Буркова<br>Л.С.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 340px; left: 511.094px;">Гладьо<br>Е.А.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 448px; left: 467.469px;">Заботов<br>В.А.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 520px; left: 412.094px;">Бакайкина<br>В.М.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 551px; left: 302.266px;">Петров<br>Е.В.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 528px; left: 173.734px;">Кривошеев<br>Я.Д.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 447px; left: 119.406px;">Козлов<br>В.Н.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 231px; left: 110.719px;">Девтерова<br>М.М.</div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="top: 342px; left: 91.875px;">Витов<br>А.С.</div>
+        <div class="dragger ui-draggable ui-draggable-handle" style="position:absolute;top:50%;left:50%">Лера</div><style>.dragger{color:#c0392b}</style><style>.dragger{font-size:10px}</style><style>.dragger{font-size:18px}</style></div>

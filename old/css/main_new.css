@@ -1,0 +1,354 @@
+div#footer {
+    font-size: 0;
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #000;
+    width: 100%;
+    z-index: 1;
+}
+
+.one_footer_btn {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    vertical-align: text-bottom;
+    border-right: 1px solid #000;
+}
+
+div#add_new {
+    border-radius: 50%;
+    width: 40px;
+    margin: 10px auto;
+    background-color: #000;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+div#prefs {
+    border-radius: 50%;
+    width: 40px;
+    margin: 10px auto;
+    background-color: #000;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+div#save_btns {
+    border-radius: 50%;
+    width: 40px;
+    margin: 10px auto;
+    background-color: #000;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+div#save_btns i {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+div#prefs i {
+    line-height: 40px;
+    font-size: 30px;
+}
+
+div#footer_delete {
+    border-radius: 50%;
+    width: 40px;
+    margin: 10px auto;
+    background-color: #000;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+div#footer_delete i {
+    line-height: 40px;
+    font-size: 30px;
+}
+
+div#header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    top: 0;
+    z-index: 1;
+}
+
+.one_footer_btn:nth-last-child(1) {
+    border-right: 0;
+}
+
+main#main_work_screen {
+    padding: 60px 0;
+}
+
+div#faq {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 30px;
+}
+
+div#header h3 {
+    margin-left: 60px;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+
+div#helper_in {
+    height: 80%;
+}
+
+.close_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    line-height: 40px;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+.close_btn i {
+    line-height: 40px;
+}
+.flex_out {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  top:0;
+  left:0;
+}
+.flex_out_out {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+     display:none;
+   top:0;
+  left:0;
+}
+
+.flex_in {
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    width:300px;
+    padding:10px;
+}
+.flex_in h4{line-height:40px; font-size:16px; margin:0; margin-bottom:20px;}
+main#main_work_screen {
+    height: 100%;
+    overflow: overlay;
+}
+div#footer {z-index: 1;}
+
+main#main_work_screen {
+    z-index: 0;
+    position: relative;
+    
+}
+div#work_place {
+    border: 0;
+}
+div#save_in button {
+    width: 100%;
+}
+div#download_map {
+    padding: 0;
+    border: 0;
+}
+div#styles p {
+    font-size: 13px;
+    margin-top: 14px;
+    color: #999;
+}
+
+.row {
+    padding: 0;
+    margin: 0 -10px;
+}
+
+div#styles {
+    margin: 0 -10px;
+}
+.row .col {
+    padding: 0 10px;
+}
+div#add_more {
+    margin-top: 17px;
+}
+
+div#styles_elem p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #999;
+}
+
+div#persone {
+    margin-bottom: 0;
+}
+button#save_to_send {
+    display: block;
+    width: 260px;
+    position: relative;
+    margin-top: 10px;
+    border: 0;
+    background-color: #f39c11;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+div#helper_in ul {
+    margin: 0;
+}
+
+div#helper_in ul li {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+div#helper_in ul li img {
+    float: left;
+    width: 38px;
+}
+
+div#helper_in ul li p {
+    line-height: 16px;
+    font-size: 14px;
+    margin-left: 50px;
+}
+div#faq {
+    cursor: pointer;
+}
+
+div#add_new {
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+    line-height: 36px;
+    text-align: center;
+    font-size: 36px;
+}
+
+div#prefs {
+    cursor: pointer;
+}
+
+div#save_btns {
+    cursor: pointer;
+    background-color: #090;
+}
+
+div#footer_delete {
+    cursor: pointer;
+    background-color: #900;
+}
+
+div#prefs {
+    background-color: #009;
+}
+button#save_set_btn {
+    color: #fff;
+    padding: 0;
+    line-height: 40px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    height: 40px;
+    background-color: #1e9800;
+    box-shadow: none;
+    border: 0;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+button#save_set_all_btn {
+    color: #fff;
+    padding: 0;
+    line-height: 40px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    height: 40px;
+    background-color: #006098;
+    box-shadow: none;
+    border: 0;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+input#urla {
+    font-size: 11px;
+}
+button#copy_url {
+    float: right;
+    width: 40px;
+    line-height: 40px;
+    height: 40px;
+    background-color: #000;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 24px;
+}
+
+input#urla {
+    display: block;
+    margin-right: 50px;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+div#red_more {
+    margin-top: 17px;
+}
+
+button#red_more_btn {
+    border: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #2980b9;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+input#names_list_red {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ccc;
+    padding: 0;
+    padding-left: 5px;
+    margin-bottom: 0;
+}
+
+div#persone_red {
+    margin-bottom: 0;
+}

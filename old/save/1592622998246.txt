@@ -1,0 +1,51 @@
+
+        <div id="pic_drag" class="ui-draggable ui-draggable-handle" style="position: relative; left: -48px; top: 6px;">
+            <div class="ui-wrapper" style="overflow: hidden; position: relative; width: 630.924px; height: 639px; top: 0px; left: 0px; margin: 0px;">
+                <div class="ui-wrapper" style="overflow: hidden; position: static; width: 631px; height: 639px; top: auto; left: auto; margin: 0px;">
+                    <div class="ui-wrapper" style="overflow: hidden; position: static; width: 631px; height: 639px; top: auto; left: auto; margin: 0px;"><img src="1.jpg" class="ui-resizable" style="margin: 0px; resize: none; position: static; zoom: 1; display: block; height: 639px; width: 631px;"><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div>
+                    <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;">
+                    </div>
+                    <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;">
+                    </div>
+                    <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;">
+                    </div>
+                </div>
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 159px; right: 0px; left: 180.297px; width: min-content; height: min-content;">
+                Иванов М.К.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 78px; right: 0px; left: 666.141px;">
+                Петров П.Г.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 181px; right: 0px; left: 546.922px;">
+                Сидоров Н.В.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 163px; right: 0px; left: 418.75px;">
+                Буркова Л.С.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 340px; right: 0px; left: 511.094px;">
+                Гладьо Е.А.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 448px; right: 0px; left: 467.469px;">
+                Заботов В.А.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 520px; right: 0px; left: 412.094px;">
+                Бакайкина В.М.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 551px; right: 0px; left: 302.266px;">
+                Петров Е.В.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 528px; right: 0px; left: 173.734px;">
+                Кривошеев Я.Д.
+            </div>
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 447px; right: 0px; left: 119.406px;">
+                Козлов В.Н.
+            </div>
+            
+            <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 231px; right: 0px; left: 110.719px;">
+                Девтерова М.М.
+            </div>
+            
+       <div class="dragger ui-draggable ui-draggable-handle" style="position: absolute; top: 342px; right: 0px; left: 91.875px;">Витов А.С.</div></div>
+            
+        
