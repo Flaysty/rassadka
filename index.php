@@ -16,17 +16,49 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
 
-
-	
-    <script type="text/javascript" src="js/html2canvas.min.js"></script>
-    <script type="text/javascript" src="js/canvas2image.js"></script>
-    <script type="text/javascript" src="js/printThis.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+	
 	
 </head>
 
 <body>
-    <!-- Yandex.Metrika counter -->
+
+	
+<div id="backdrop"></div>
+<div id='pop_up' class="auth">
+    <ul class="auth__tabs">
+        <li id="reg-form-link" class="auth__link active">Регистрация</li>
+        <li id="login-form-link" class="auth__link">Вход</li>
+    </ul>
+
+    <p class="header__subtitle">Для сохранения выполните регистрацию или вход</p>
+
+    <div id="reg">	
+        <h3 class="header__title">Регистрация</h3>
+        <form method='post' id="reg_form">
+            <input class="auth__input" type='name' name='name' placeholder='Имя' required /><br /><br />
+            <input class="auth__input" type='email' name='email' placeholder='Электронная почта' required /><br /><br />
+            <input class="auth__input" type='password' name='password' placeholder='Пароль' required /><br /><br />
+            <input class="auth__input" type='password' name='r_password' placeholder='Повторите пароль' required /><br /><br />
+            <input class="auth__button" type='submit' name='submit' value='Регистрация' />
+        </form>
+    </div>
+        
+    <div id="login-form">
+        <h3 class="header__title">Вход</h3>
+        <form method='post' id="log_form">
+            <input class="auth__input" type='email' name='email' placeholder='Электронная почта' required /><br /><br />
+            <input class="auth__input" type='password' name='password' placeholder='Пароль' required /><br /><br />
+            <input class="auth__button" type='submit' name='submit' value='Войти' />
+        </form>
+    </div>
+
+    <a href='javascript:void(0);' id='not_now' class="auth__forgot_link">Не сейчас</a>
+</div>
+
+
+	
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -50,47 +82,7 @@
 
   gtag('config', 'UA-176427613-1');
 </script>
-
-<?php
-// Turn off all error reporting
-error_reporting(0);
-
-session_start();
-
-?>
-
-<?php
-
-
-if(!empty($_SESSION['id'])) {
-
-?>
-
-
-
-
-<?php
-
-	//echo "<div id='reg_log_menu'>";
-
-	//echo "<a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/logout.php'>Выйти</a>";
 	
-	//echo "</div>";
-	
-} else {
-		//echo "<div id='reg_log_menu'>";
-		
-		//echo "<a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/reg.php'>Регистрация</a><br/>";
-		//echo "<a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/login.php'>Вход</a>";
-	
-		
-		//echo "</div>";
-
-}
-?>
-
-
-
     <div id="canvas"></div>
     <main id="main_work_screen">
         <div class="tabl"></div>
@@ -102,8 +94,8 @@ if(!empty($_SESSION['id'])) {
             </div>
             <div class="table__bottom"></div>
         </div>
-    </main> 
-    
+    </main>
+	
     <div class="options">
         <div class="options__item"  data-target="color_popup">
             <div class="options__icon">
@@ -196,6 +188,7 @@ if(!empty($_SESSION['id'])) {
                 <div class="pallete__item" data-color="#FFA3A3"></div>
                 <div class="pallete__item" data-color="#ABCDFF"></div>
             </div>
+			
         </div>
         
     </div>
@@ -227,18 +220,30 @@ if(!empty($_SESSION['id'])) {
         </div>
     </div>
 
-    <!-- <div id="menu_btn">
-        <div id="menu_open">
-            <i class="mdi mdi-menu"></i>
-        </div>
-    </div> -->
-	
 	<header class="header header--fixed d-flex justify-space-between align-center">
+
         <div class="header__name">
-            <div class="header__title" contenteditable spellcheck="false">Заголовок</div>
-            <div class="header__subtitle" contenteditable spellcheck="false">Подзаголовок</div>
+            <div id="header__title" class="header__title" contenteditable spellcheck="false">Заголовок</div>
+            <div id="header__subtitle" class="header__subtitle" contenteditable spellcheck="false">Подзаголовок</div>
         </div>
+			
+<script type="text/javascript">(function() {
+  if (window.pluso)if (typeof window.pluso.start == "function") return;
+  if (window.ifpluso==undefined) { window.ifpluso = 1;
+    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+  }})();</script>
+<div id="social">
+	<div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=01" data-services="facebook,twitter,vkontakte,odnoklassniki,email" data-url="https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/" data-title="Рассадка на свадьбу" data-description="Рассадка на свадьбу"></div>
+</div>
+		
         <div class="header__actions d-flex">
+			
+	
+			
             <div class="clear_btn d-flex justify-space-between align-center" id="delete_btn">
                 <p>Очистить</p>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -252,7 +257,8 @@ if(!empty($_SESSION['id'])) {
                     <input id="save_to_send_input" name="save_to_send_input" type="hidden">
                     <input id="save_to_send_text" name="save_to_send_text" type="hidden">
                     <div id="save_to_send" name="save_to_send" class="save_btn">
-                        <p>Сохранить</p>
+						<p>Сохранить</p>
+						
                         <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4444 17H1" stroke="#CECECE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M2.77734 7.22223L7.22179 11.6667L11.6662 7.22223" stroke="#CECECE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -270,54 +276,10 @@ if(!empty($_SESSION['id'])) {
                     <path d="M11.8808 5.59909L6.30078 8.85545" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
+
         </div>
     </header>
-
-<!-- 	
-    <div id="menu">
-        <div id="add_table">
-            <button id="add_table_btn">+</button>
-            <select id="select_table">
-                <option disabled="" selected="">Добавить стол</option>
-                <option value="mg">Жених и невеста</option>
-                <option value="4">На 4 человека</option>
-                <option value="5">На 5 человек</option>
-                <option value="6">На 6 человек</option>
-                <option value="7">На 7 человек</option>
-                <option value="8">На 8 человек</option>
-            </select>
-        </div>
-        <div id="delete_block">
-            <button id="delete_btn">Очистить</button>
-        </div>
-        <div id="save_block">
-            <form method="post" id="save_a_sand">
-                <input id="save_to_send_input" name="save_to_send_input" type="hidden">
-                <input id="save_to_send_text" name="save_to_send_text" type="hidden">
-                <button id="save_to_send" name="save_to_send" type="submit">Сохранить</button>
-            </form>
-        </div>
 		
-<?php
-	if(!empty($_SESSION['id'])) {
-		echo "<br />";
-		echo "<a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/logout.php' class='underline'><div class='menu_button'>Выйти</div></a>";
-		//echo "<a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/logout.php'>Выйти</a>";
-		//echo "</div>";
-	} else {
-		echo "<br />";
-		
-		echo "<a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/reg.php' class='underline'><div class='menu_button'>Регистрация</div></a>";
-		
-		echo "<br />";
-	
-		echo "<a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/login.php' class='underline'><div class='menu_button'>Вход</div></a>";
-		
-}
-?>
-		
-    </div>
-     -->
     <div id="zoom_block">
         <input type="hidden" id="cur_zoom" value="1">
         <div id="ZoomIn" class="zoom">
@@ -512,6 +474,7 @@ if(!empty($_SESSION['id'])) {
     </div>
 	
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+
 </body>
 
 </html>

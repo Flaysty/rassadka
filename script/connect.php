@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost'; // адрес сервера 
-$database = 'alekseitenor_wedw'; // имя базы данных
-$user = '046237511_wedw'; // имя пользователя
-$password = 'jz~canw+Tue8'; // пароль
+$database = 'alekseitenor_rass'; // имя базы данных
+$user = '046237511_rass'; // имя пользователя
+$password = 'u3(Ach3auecx'; // пароль
 
 $link = mysqli_connect($host, $user, $password, $database);
 
