@@ -25,7 +25,18 @@
 
 	
 <div id="backdrop"></div>
-<div id='pop_up' class="auth">
+<div id="pop_up" class="auth">
+    
+    <div class="mobile_menu__header">
+            <div class="title">Регистрация</div>
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <path d="M21 2L2 21" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 2L21 21" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+
     <ul class="auth__tabs">
         <li id="reg-form-link" class="auth__link active">Регистрация</li>
         <li id="login-form-link" class="auth__link">Вход</li>
@@ -36,20 +47,22 @@
     <div id="reg">	
         <h3 class="header__title">Регистрация</h3>
         <form method='post' id="reg_form">
-            <input class="auth__input" type='name' name='name' placeholder='Имя' required /><br /><br />
-            <input class="auth__input" type='email' name='email' placeholder='Электронная почта' required /><br /><br />
-            <input class="auth__input" type='password' name='password' placeholder='Пароль' required /><br /><br />
-            <input class="auth__input" type='password' name='r_password' placeholder='Повторите пароль' required /><br /><br />
+            <input class="auth__input" type='name' name='name' placeholder='Имя' required />
+            <input class="auth__input" type='email' name='email' placeholder='Электронная почта' required />
+            <input class="auth__input" type='password' name='password' placeholder='Пароль' required />
+            <input class="auth__input" type='password' name='r_password' placeholder='Повторите пароль' required />
             <input class="auth__button" type='submit' name='submit' value='Регистрация' />
+            <a href="javascript:void(0)" id="m_login" class="m_login_btn">Войти</a>
         </form>
     </div>
         
     <div id="login-form">
         <h3 class="header__title">Вход</h3>
         <form method='post' id="log_form">
-            <input class="auth__input" type='email' name='email' placeholder='Электронная почта' required /><br /><br />
-            <input class="auth__input" type='password' name='password' placeholder='Пароль' required /><br /><br />
+            <input class="auth__input" type='email' name='email' placeholder='Электронная почта' required />
+            <input class="auth__input" type='password' name='password' placeholder='Пароль' required />
             <input class="auth__button" type='submit' name='submit' value='Войти' />
+            <a href="javascript:void(0)" id="m_reg" class="m_login_btn">Регистрация</a>
         </form>
     </div>
 
@@ -221,21 +234,20 @@
     </div>
 
 	<header class="header header--fixed d-flex justify-space-between align-center">
-
         <div class="header__name">
             <div id="header__title" class="header__title" contenteditable spellcheck="false">Заголовок</div>
             <div id="header__subtitle" class="header__subtitle" contenteditable spellcheck="false">Подзаголовок</div>
         </div>
 	<!--		
-<script type="text/javascript">(function() {
-  if (window.pluso)if (typeof window.pluso.start == "function") return;
-  if (window.ifpluso==undefined) { window.ifpluso = 1;
-    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-    var h=d[g]('body')[0];
-    h.appendChild(s);
-  }})();</script> -->
+    <script type="text/javascript">(function() {
+    if (window.pluso)if (typeof window.pluso.start == "function") return;
+    if (window.ifpluso==undefined) { window.ifpluso = 1;
+        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+        s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+        s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+        var h=d[g]('body')[0];
+        h.appendChild(s);
+    }})();</script> -->
 		
 <div id="social">
 	<!--
@@ -247,39 +259,9 @@
 	<a class="" href="https://mail.google.com">Почта</a>
 	
 	
-	<a class="copyToClipBoardBtn" type="button" href="javascript:void(0);">Копировать ссылку</a>
+	<!-- <a class="copyToClipBoardBtn" type="button" href="javascript:void(0);">Копировать ссылку</a> -->
 	<input type="text" style="display: none;">
-	
-	<script type="text/javascript">
-	
-let copyUrlBtn = document.querySelector('.copyToClipBoardBtn');
-	
 
-if (copyUrlBtn) {
-	copyUrlBtn.addEventListener('click', () => {
-		let tempInput = document.createElement('textarea');
-
-		tempInput.style.fontSize = '12pt';
-		tempInput.style.border = '0';
-		tempInput.style.padding = '0';
-		tempInput.style.margin = '0';
-		tempInput.style.position = 'absolute';
-		tempInput.style.left = '-9999px';
-		tempInput.setAttribute('readonly', '');
-
-		tempInput.value = window.location.href;
-
-		copyUrlBtn.parentNode.appendChild(tempInput);
-
-		tempInput.select();
-		tempInput.setSelectionRange(0, 99999);
-
-		document.execCommand('copy');
-
-		tempInput.parentNode.removeChild(tempInput);
-	});
-}
-</script>
 	
 </div>
 		
@@ -295,13 +277,12 @@ if (copyUrlBtn) {
                 </svg>
             </div>
     
-            <div class="d-flex justify-space-between align-center">
+            <div class="d-flex justify-space-between align-center" id="save_btn">
                 <form method="post" id="save_a_sand">
                     <input id="save_to_send_input" name="save_to_send_input" type="hidden">
                     <input id="save_to_send_text" name="save_to_send_text" type="hidden">
                     <div id="save_to_send" name="save_to_send" class="save_btn">
 						<p>Сохранить</p>
-						
                         <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4444 17H1" stroke="#CECECE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M2.77734 7.22223L7.22179 11.6667L11.6662 7.22223" stroke="#CECECE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -525,9 +506,107 @@ if (copyUrlBtn) {
         </div>
         <div class="m_table__inner"></div>
     </div>
+
+    <div id="share_popup">
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                <path d="M21 2L2 21" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 2L21 21" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="title">Поделиться с помощью</div>
+        <div class="content">
+            <div class="item">
+                <a class="" href="https://wa.me/?text=https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/index.php?seat_id=<?php echo $_GET['seat_id']; ?>">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="27.5" cy="27.5" r="27.5" fill="#4EB34C"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M36.3526 18.6904C34.2646 16.5998 31.4879 15.448 28.5302 15.4468C22.4348 15.4468 17.4728 20.4076 17.4703 26.5054C17.4703 28.4543 17.9791 30.3563 18.9461 32.0341L17.3779 37.7636L23.2405 36.225C24.8567 37.1058 26.6749 37.5702 28.5252 37.5714H28.5302C34.6243 37.5714 39.5863 32.6106 39.5888 26.5128C39.5888 23.5588 38.4407 20.7809 36.3526 18.6904ZM28.5302 35.7051H28.5265C26.877 35.7039 25.2595 35.2616 23.8478 34.4227L23.5127 34.2232L20.0339 35.136L20.9615 31.7446L20.7434 31.3972C19.8232 29.9337 19.3379 28.2424 19.3379 26.5054C19.3403 21.4375 23.4634 17.3143 28.5339 17.3143C30.989 17.3156 33.2963 18.2727 35.032 20.0097C36.7665 21.7479 37.7225 24.0564 37.7212 26.5128C37.7188 31.5808 33.5957 35.7051 28.5302 35.7051ZM33.5723 28.8201C33.2951 28.6809 31.9375 28.0132 31.6838 27.9208C31.4312 27.8285 31.2477 27.7829 31.0629 28.0588C30.8781 28.3348 30.3484 28.9569 30.187 29.1416C30.0257 29.3264 29.8643 29.3486 29.5883 29.2106C29.3124 29.0727 28.4218 28.7807 27.366 27.8395C26.5444 27.1066 25.99 26.2024 25.8286 25.9252C25.6673 25.648 25.8114 25.499 25.9506 25.361C26.075 25.2378 26.2265 25.0382 26.3645 24.8769C26.5025 24.7155 26.5481 24.6009 26.6405 24.4161C26.7328 24.2314 26.6873 24.07 26.617 23.932C26.5481 23.7928 25.9949 22.4328 25.7646 21.8797C25.5416 21.3438 25.3137 21.4153 25.1437 21.4079C24.9836 21.4005 24.7988 21.398 24.6152 21.398C24.4305 21.398 24.1311 21.467 23.8773 21.743C23.6236 22.0201 22.9103 22.6878 22.9103 24.0478C22.9103 25.4078 23.9007 26.7222 24.0387 26.907C24.1767 27.0918 25.9876 29.882 28.7593 31.0794C29.4196 31.364 29.9345 31.534 30.3349 31.6621C30.9964 31.8727 31.5988 31.8419 32.0755 31.7717C32.6065 31.6929 33.7102 31.104 33.9406 30.4585C34.1709 29.813 34.1709 29.2599 34.102 29.1441C34.033 29.0283 33.847 28.9581 33.5723 28.8201Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="item">
+                <a class="" href="https://telegram.me/share/url?url=https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/index.php?seat_id=<?php echo $_GET['seat_id']; ?>">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="27.5" cy="27.5" r="27.5" fill="#3A8ED9"/>
+                        <path d="M35.4475 18.1249L15.074 25.8635C13.6835 26.4136 13.6916 27.1776 14.8189 27.5183L20.0496 29.1255L32.1519 21.6043C32.7242 21.2613 33.247 21.4458 32.8172 21.8216L23.012 30.5381H23.0097L23.012 30.5392L22.6511 35.85C23.1797 35.85 23.413 35.6111 23.7095 35.3293L26.2501 32.8958L31.5348 36.7407C32.5093 37.2693 33.2091 36.9977 33.4515 35.8522L36.9207 19.748C37.2758 18.3456 36.3772 17.7107 35.4475 18.1249Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="viber://pa?text=https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/index.php?seat_id=<?php echo $_GET['seat_id']; ?>">
+                    <svg width="54" height="55" viewBox="0 0 54 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="27" cy="27.5" rx="27" ry="27.5" fill="#8E24AA"/>
+                        <path d="M41.3006 30.4348C42.1982 22.8785 40.8693 18.108 38.4721 15.9503L38.4734 15.9491C34.6043 12.2643 21.5378 11.7189 16.9089 16.1146C14.8302 18.2647 14.098 21.4204 14.0178 25.3271C13.9376 29.235 13.8423 36.5556 20.6639 38.5416H20.6702L20.6639 41.5744C20.6639 41.5744 20.6175 42.803 21.4024 43.05C22.3 43.3409 22.7063 42.7704 25.4983 39.4355C30.1673 39.8404 33.753 38.9127 34.1605 38.7773C35.1033 38.4613 40.438 37.7555 41.3006 30.4348ZM25.9585 37.3016C25.9585 37.3016 23.0034 40.9864 22.0844 41.943C21.7835 42.2539 21.4538 42.2251 21.4588 41.6082C21.4588 41.2033 21.4813 36.5732 21.4813 36.5732C15.6978 34.9157 16.0388 28.6821 16.1015 25.4211C16.1642 22.1589 16.761 19.4871 18.5213 17.688C22.5821 13.8804 34.0376 14.7317 36.9563 17.4749C40.5245 20.6381 39.2544 29.5748 39.262 29.8794C38.5285 35.9902 34.2056 36.3776 33.4107 36.6421C33.071 36.755 29.9178 37.5661 25.9585 37.3016Z" fill="white"/>
+                        <path d="M27.5932 18.4039C27.1105 18.4039 27.1105 19.1562 27.5932 19.1624C31.3382 19.1913 34.4224 21.8016 34.4562 26.5896C34.4562 27.0949 35.1959 27.0886 35.1897 26.5834H35.1884C35.1483 21.4242 31.7807 18.4328 27.5932 18.4039Z" fill="white"/>
+                        <path d="M32.5191 25.796C32.5078 26.295 33.2462 26.3188 33.2525 25.8135C33.314 22.9688 31.56 20.6255 28.2639 20.3786C27.7812 20.3435 27.731 21.102 28.2125 21.1371C31.071 21.354 32.5767 23.3048 32.5191 25.796Z" fill="white"/>
+                        <path d="M31.7298 29.0319C31.1104 28.6733 30.4798 28.8965 30.219 29.2488L29.6736 29.9547C29.3966 30.3132 28.8788 30.2656 28.8788 30.2656C25.1 29.2664 24.0894 25.312 24.0894 25.312C24.0894 25.312 24.0431 24.7767 24.3891 24.4896L25.0711 23.9254C25.4122 23.6546 25.6278 23.0026 25.2805 22.362C24.3527 20.6857 23.7296 20.1077 23.4124 19.6639C23.0789 19.2464 22.5774 19.1524 22.0559 19.4345H22.0446C20.9601 20.0689 19.7728 21.2562 20.1527 22.4786C20.8009 23.7674 21.9919 27.876 25.7883 30.9802C27.5724 32.4484 30.3958 33.9529 31.5944 34.3001L31.6057 34.3177C32.7867 34.7114 33.9351 33.4777 34.5482 32.3606V32.3518C34.8203 31.8115 34.73 31.2999 34.3325 30.9652C33.6279 30.2781 32.5648 29.5196 31.7298 29.0319Z" fill="white"/>
+                        <path d="M28.7808 23.1769C29.9857 23.2471 30.5699 23.8765 30.6326 25.1691C30.6552 25.6744 31.3886 25.6393 31.366 25.134C31.2858 23.4465 30.4057 22.5062 28.8209 22.4184C28.3382 22.3896 28.2931 23.1481 28.7808 23.1769Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="" href="https://www.facebook.com/sharer/sharer.php?u=https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/index.php?seat_id=<?php echo $_GET['seat_id']; ?>">
+                    <svg width="54" height="55" viewBox="0 0 54 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="27" cy="27.5" rx="27" ry="27.5" fill="#4769BE"/>
+                        <path d="M29.7956 41V29.1595H33.3496L33.8779 24.5235H29.7956V21.5706C29.7956 20.2328 30.1273 19.3169 31.8355 19.3169H34V15.1837C32.9473 15.0566 31.8882 14.9959 30.8291 15.0002C27.6877 15.0002 25.5308 17.1557 25.5308 21.1126V24.5148H22V29.1508H25.5386V41H29.7956Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="" href="http://vk.com/share.php?url=https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/index.php?seat_id=<?php echo $_GET['seat_id']; ?>">
+                    <svg width="54" height="55" viewBox="0 0 54 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="27" cy="27.5" rx="27" ry="27.5" fill="#486FAA"/>
+                        <path d="M37.4956 21.9481C37.6493 21.4011 37.4956 21 36.7688 21H34.3611C33.7485 21 33.4685 21.347 33.3148 21.7281C33.3148 21.7281 32.0907 24.9264 30.356 27.0002C29.7961 27.6036 29.5403 27.7942 29.2351 27.7942C29.0825 27.7942 28.8607 27.6036 28.8607 27.0566V21.9481C28.8607 21.2917 28.6839 21 28.1734 21H24.3901C24.008 21 23.7775 21.3035 23.7775 21.5928C23.7775 22.2139 24.6448 22.3574 24.7337 24.1077V27.9047C24.7337 28.7363 24.5943 28.8881 24.2869 28.8881C23.4711 28.8881 21.4862 25.678 20.3081 22.0034C20.0787 21.2894 19.847 21.0012 19.2322 21.0012H16.8256C16.1372 21.0012 16 21.3482 16 21.7293C16 22.4139 16.8157 25.8015 19.7998 30.282C21.7892 33.3415 24.5899 35 27.1414 35C28.6707 35 28.8596 34.6318 28.8596 33.9966V31.6841C28.8596 30.9477 29.0056 30.7995 29.4898 30.7995C29.8455 30.7995 30.4581 30.9924 31.8865 32.4663C33.5179 34.2142 33.788 34.9988 34.7047 34.9988H37.1113C37.7986 34.9988 38.1422 34.6306 37.9446 33.9037C37.7283 33.1803 36.9488 32.1275 35.9146 30.8819C35.3525 30.1714 34.5126 29.4068 34.2568 29.0245C33.9 28.5317 34.0032 28.3141 34.2568 27.8765C34.2579 27.8777 37.1904 23.4525 37.4956 21.9481Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="item">
+                <a class="copyToClipBoardBtn" type="button" href="javascript:void(0);">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="27.5" cy="27.5" r="27.5" fill="#C4C4C4"/>
+                        <path d="M35.6911 24.1356H27.0023C25.9359 24.1356 25.0714 25.0001 25.0714 26.0665V34.7553C25.0714 35.8217 25.9359 36.6862 27.0023 36.6862H35.6911C36.7575 36.6862 37.6219 35.8217 37.6219 34.7553V26.0665C37.6219 25.0001 36.7575 24.1356 35.6911 24.1356Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.2098 29.9282H20.2443C19.7322 29.9282 19.2411 29.7248 18.879 29.3627C18.5169 29.0005 18.3135 28.5094 18.3135 27.9973V19.3085C18.3135 18.7964 18.5169 18.3053 18.879 17.9432C19.2411 17.5811 19.7322 17.3777 20.2443 17.3777H28.9332C29.4453 17.3777 29.9364 17.5811 30.2985 17.9432C30.6606 18.3053 30.864 18.7964 30.864 19.3085V20.2739" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
 	
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+	
+	<script type="text/javascript">
+        let copyUrlBtn = document.querySelector('.copyToClipBoardBtn');
 
+        if (copyUrlBtn) {
+            copyUrlBtn.addEventListener('click', () => {
+                let tempInput = document.createElement('textarea');
+
+                tempInput.style.fontSize = '12pt';
+                tempInput.style.border = '0';
+                tempInput.style.padding = '0';
+                tempInput.style.margin = '0';
+                tempInput.style.position = 'absolute';
+                tempInput.style.left = '-9999px';
+                tempInput.setAttribute('readonly', '');
+
+                tempInput.value = window.location.href;
+
+                copyUrlBtn.parentNode.appendChild(tempInput);
+
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999);
+
+                document.execCommand('copy');
+
+                tempInput.parentNode.removeChild(tempInput);
+                alert('Скопировано')
+            });
+        }
+</script>
 </body>
 
 </html>

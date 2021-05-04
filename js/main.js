@@ -316,7 +316,7 @@ $(document).ready(function () {
                     } else {
                         $("#edit").remove();
 
-                        $(".header__actions").append("<div id='logout' class='d-flex save_btn'><a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/logout.php'><p>Выйти</p></a></div>");
+                        $(".header__actions").append(logoutBtn);
                     }
                 }
 
@@ -390,7 +390,7 @@ $(document).ready(function () {
 
                         $("#work_place").resizable().draggable().disableSelection();
 
-                        $(".header__actions").append("<div id='logout' class='d-flex save_btn'><a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/logout.php'><p>Выйти</p></a></div>");
+                        $(".header__actions").append(logoutBtn);
                     }
                 }
 
@@ -415,7 +415,7 @@ $(document).ready(function () {
 
         } else {
 
-            $(".header__actions").append("<div id='logout' class='d-flex save_btn'><a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/logout.php'><p>Выйти</p></a></div>");
+            $(".header__actions").append(logoutBtn);
         }
     }
 
@@ -508,11 +508,11 @@ $(document).ready(function () {
     });
 
 
-    $(".share_btn").click(function () {
-        //alert("Поделиться ссылкой: " + wlahref);
-        $("#social").css("display", "block");
+    // $(".share_btn").click(function () {
+    //     //alert("Поделиться ссылкой: " + wlahref);
+    //     $("#social").css("display", "block");
 
-    });
+    // });
 
 
     //$("#work_place").resizable().draggable().disableSelection();
@@ -705,6 +705,11 @@ $(document).ready(function () {
         $('.mobile_menu').fadeOut(300)
     })
 
+    $('.auth .close').click(function () {
+        $('.auth').fadeOut(300)
+        $('#backdrop').fadeOut(300)
+    })
+
     $('.popup__close').click(function () {
         $('.popup').removeClass('active').fadeOut(100)
     })
@@ -792,6 +797,39 @@ $(document).ready(function () {
             $('.popup').fadeOut(100);
         }
     });
+
+    $('#share_popup .close').click(function() {
+        $('#share_popup').fadeOut(300)
+        $('#backdrop').fadeOut(300)
+    })
+
+    $('.share_btn').click(function() {
+        $('#share_popup').fadeIn(300)
+        $('#backdrop').fadeIn(300)
+    })
+
+    $('.copyToClipBoardBtn').click(function() {
+        let tempInput = document.createElement('textarea');
+
+        tempInput.style.fontSize = '12pt';
+        tempInput.style.border = '0';
+        tempInput.style.padding = '0';
+        tempInput.style.margin = '0';
+        tempInput.style.position = 'absolute';
+        tempInput.style.left = '-9999px';
+        tempInput.setAttribute('readonly', '');
+
+        tempInput.value = window.location.href;
+
+        copyUrlBtn.parentNode.appendChild(tempInput);
+
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999);
+
+        document.execCommand('copy');
+
+        tempInput.parentNode.removeChild(tempInput);
+    })
 
     function createPopperTable() {
         const button = document.querySelector('.seating');
@@ -1556,8 +1594,41 @@ function showLoginScreen() {
             $('#reg').fadeIn(200)
         })
     })
+    $("#m_login").click(function () {
+        $('#reg').fadeOut(200, function () {
+            $("#login-form-link").addClass('active')
+            $('#reg-form-link').removeClass('active')
+            $('#login-form').fadeIn(200)
+        })
+    })
+    $("#m_reg").click(function () {
+        $('#login-form').fadeOut(200, function () {
+            $("#reg-form-link").addClass('active')
+            $('#login-form-link').removeClass('active')
+            $('#reg').fadeIn(200)
+        })
+    })
     $("#not_now").click(function () {
         $("#pop_up").fadeOut(300);
         $('#backdrop').fadeOut(300)
     });
 }
+
+const logoutBtn = `
+    <div id='logout' class='d-flex save_btn'>
+        <a href='https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/logout.php'>
+            <p>Выйти</p>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+            <path d="M6.97676 12.814H1.74418C1.42324 12.814 1.16279 12.5536 1.16279 12.2327V1.76752C1.16279 1.44659 1.42327 1.18614 1.74418 1.18614H6.97676C7.29827 1.18614 7.55814 0.926261 7.55814 0.604753C7.55814 0.283245 7.29827 0.0233154 6.97676 0.0233154H1.74418C0.782551 0.0233154 0 0.805894 0 1.76752V12.2326C0 13.1943 0.782551 13.9768 1.74418 13.9768H6.97676C7.29827 13.9768 7.55814 13.7169 7.55814 13.3954C7.55814 13.0739 7.29827 12.814 6.97676 12.814Z" fill="white"/>
+            <path d="M13.8268 6.58606L10.2919 3.09768C10.064 2.87209 9.69537 2.87502 9.46978 3.1035C9.2442 3.33199 9.24652 3.70001 9.47561 3.92559L12.0018 6.4186H5.23257C4.91106 6.4186 4.65118 6.67848 4.65118 6.99999C4.65118 7.32149 4.91106 7.5814 5.23257 7.5814H12.0018L9.47561 10.0744C9.24655 10.3 9.2448 10.668 9.46978 10.8965C9.58372 11.0116 9.73373 11.0697 9.88374 11.0697C10.0314 11.0697 10.1791 11.0139 10.2919 10.9023L13.8268 7.41392C13.9372 7.30462 14 7.15576 14 6.99996C14 6.84421 13.9378 6.69595 13.8268 6.58606Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+            <rect width="14" height="14" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+        </a>
+    </div>
+`

@@ -306,6 +306,7 @@ div#work_place {
     border-radius: 20px;
     border: 1px solid #d2d2d2;
     outline: none;
+    margin-bottom: 10px;
 }
 
 .auth__button {
@@ -4585,10 +4586,165 @@ form#save_a_sand {
 }
 
 
-@media (max-width: 812px) {
 
-    .options,
-    .header {
+
+#pop_up {
+	top: 20%;
+	left: 42%;
+	position: absolute;
+	max-width: 300px;
+	padding: 20px;
+	z-index: 1002;
+	display: none;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	text-align: center;
+}
+
+div.stul_guest_name {
+    font-size: inherit;
+    line-height: inherit;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.stul_edit {
+    background: url(../images/edit.svg);
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+}
+
+.stul_edit.active {
+    background: url(../images/save.svg);
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    /* transition: all 0.3s; */
+}
+
+.stul_edit:hover {
+    opacity: 0.8;
+}
+
+.stul_edit:active {
+    transform: scale(0.8);
+}
+
+.stul__content {
+    line-height: 8px;
+    font-size: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+#pop_up.auth .mobile_menu__header,
+#pop_up .m_login_btn,
+#pop_up #not_now {
+    display: none;
+}
+
+#logout a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+#share_popup {
+    display: none;
+    position: absolute;
+    padding: 32px 34px 40px 34px;
+    background: #fff;
+    max-width: 427px;
+    width: 100%;
+    min-height: 172px;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    transform: translate(-50%, -50%);
+    z-index: 2001;
+}
+
+#share_popup .title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+    color: #000000;
+}
+
+#share_popup .close {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #FE5050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: -16px;
+    top: -12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#share_popup .close:hover {
+    transform: rotate(90deg);
+}
+#share_popup .content {
+    margin-top: 20px;
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: repeat(auto-fill, 55px);
+}
+#share_popup .item {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+#share_popup .item:hover {
+    opacity: 0.8
+}
+
+
+
+
+
+
+
+
+@media (max-width: 812px) {
+    #share_popup .close {
+        right: 0;
+    }
+    .options {
         display: none;
     }
 
@@ -4644,7 +4800,7 @@ form#save_a_sand {
         font-size: 19px;
         line-height: 22px;
         text-transform: uppercase;
-        color: #9B84B9;
+        color: #9567CF;
         padding-left: 15px;
     }
 
@@ -4810,6 +4966,141 @@ form#save_a_sand {
         margin: 11px 0;
         cursor: pointer;
     }
+
+    .header {
+        height: 67px;
+        padding: 0 5px 0 19px;
+    }
+
+    .header .header__title {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .header .header__subtitle {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .header #delete_btn p, .header .share_btn p {
+        display: none;
+    }
+    .header #delete_btn, .header .share_btn {
+        background: #EEE3FD;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #9567CF;
+    }
+
+    .header #logout p {
+        display: none;
+    }
+    .header #save_btn p {
+        display: none;
+    }
+    .header .save_btn {
+        background: #9567CF;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+    .header #delete_btn path, .header .save_btn path, .header .share_btn path {
+        stroke: currentColor;
+    }
+
+    .header #logout path {
+        stroke: initial;
+    }
+
+    .header__actions *:not(:last-child) {
+        margin-right: 5px;
+    }
+
+
+    /* 
+    -------------------AUTH----------------
+    */
+
+    #pop_up.auth {
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        padding: 0;
+    }
+
+    #pop_up.auth .mobile_menu__header {
+        display: flex;
+    }
+
+    #pop_up.auth .auth__tabs, #pop_up.auth .header__title, #pop_up.auth .header__subtitle {
+        display: none;
+    }
+
+    #reg, #login-form {
+        padding: 20px 15px;
+    }
+
+    #pop_up.auth .auth__input {
+        width: 100%;
+        height: 60px;
+        background: #FFFFFF;
+        border: 1px solid #D7D7D7;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+    #pop_up.auth .auth__input::placeholder {
+        font-weight: 400;
+    }
+    #pop_up.auth .auth__input:focus {
+        border-color: #9567CF;
+        border-width: 2px;
+    }
+
+    #pop_up.auth .auth__button {
+        width: 100%;
+        height: 60px;
+        background: #9567CF;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    #pop_up.auth .m_login_btn {
+        width: 100%;
+        height: 60px;
+        font-family: 'Roboto';
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #9567CF;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    
 }
 
 .txtarea {
@@ -4824,70 +5115,4 @@ form#save_a_sand {
     line-height: inherit;
     overflow: hidden;
     font-family: inherit;
-}
-
-
-#pop_up {
-	top: 20%;
-	left: 42%;
-	position: absolute;
-	max-width: 300px;
-	padding: 20px;
-	z-index: 1002;
-	display: none;
-	background-color: #FFFFFF;
-	border-radius: 8px;
-	text-align: center;
-}
-
-div.stul_guest_name {
-    font-size: inherit;
-    line-height: inherit;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.stul_edit {
-    background: url(../images/edit.svg);
-    width: 12px;
-    height: 12px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    cursor: pointer;
-}
-
-.stul_edit.active {
-    background: url(../images/save.svg);
-    width: 12px;
-    height: 12px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    cursor: pointer;
-    /* transition: all 0.3s; */
-}
-
-.stul_edit:hover {
-    opacity: 0.8;
-}
-
-.stul_edit:active {
-    transform: scale(0.8);
-}
-
-.stul__content {
-    line-height: 8px;
-    font-size: 8px;
 }
