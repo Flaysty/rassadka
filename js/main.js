@@ -310,7 +310,7 @@ $(document).ready(function () {
                 $('#backdrop').fadeOut(300);
 
                 if (getCookie("id")) {
-                    $(".share_btn").css("display", "inline-block");
+                    $(".share_btn").css("display", "flex");
                     if ($("#logout").html()) {
 
                     } else {
@@ -371,7 +371,7 @@ $(document).ready(function () {
                 $('#backdrop').fadeOut(300);
 
                 if (getCookie("id")) {
-                    $(".share_btn").css("display", "inline-block");
+                    $(".share_btn").css("display", "flex");
                     if ($("#logout").html()) {
 
                     } else {
