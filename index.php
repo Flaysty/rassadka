@@ -226,7 +226,7 @@
             <div id="header__title" class="header__title" contenteditable spellcheck="false">Заголовок</div>
             <div id="header__subtitle" class="header__subtitle" contenteditable spellcheck="false">Подзаголовок</div>
         </div>
-			
+	<!--		
 <script type="text/javascript">(function() {
   if (window.pluso)if (typeof window.pluso.start == "function") return;
   if (window.ifpluso==undefined) { window.ifpluso = 1;
@@ -235,9 +235,52 @@
     s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
     var h=d[g]('body')[0];
     h.appendChild(s);
-  }})();</script>
+  }})();</script> -->
+		
 <div id="social">
-	<div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=01" data-services="facebook,twitter,vkontakte,odnoklassniki,email" data-url="https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/" data-title="Рассадка на свадьбу" data-description="Рассадка на свадьбу"></div>
+	<!--
+	<div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=01" data-services="facebook,twitter,vkontakte,odnoklassniki,email" data-url="https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/" data-title="Рассадка на свадьбу" data-description="Рассадка на свадьбу"></div> -->
+	
+	<a class="" href="https://telegram.me/share/url?url=https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/index.php?seat_id=<?php echo $_GET['seat_id']; ?>">Телеграм</a>
+	<a class="" href="https://wa.me/?text=https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/index.php?seat_id=<?php echo $_GET['seat_id']; ?>">Ватсап</a>
+	
+	<a class="" href="https://mail.google.com">Почта</a>
+	
+	
+	<a class="copyToClipBoardBtn" type="button" href="javascript:void(0);">Копировать ссылку</a>
+	<input type="text" style="display: none;">
+	
+	<script type="text/javascript">
+	
+let copyUrlBtn = document.querySelector('.copyToClipBoardBtn');
+	
+
+if (copyUrlBtn) {
+	copyUrlBtn.addEventListener('click', () => {
+		let tempInput = document.createElement('textarea');
+
+		tempInput.style.fontSize = '12pt';
+		tempInput.style.border = '0';
+		tempInput.style.padding = '0';
+		tempInput.style.margin = '0';
+		tempInput.style.position = 'absolute';
+		tempInput.style.left = '-9999px';
+		tempInput.setAttribute('readonly', '');
+
+		tempInput.value = window.location.href;
+
+		copyUrlBtn.parentNode.appendChild(tempInput);
+
+		tempInput.select();
+		tempInput.setSelectionRange(0, 99999);
+
+		document.execCommand('copy');
+
+		tempInput.parentNode.removeChild(tempInput);
+	});
+}
+</script>
+	
 </div>
 		
         <div class="header__actions d-flex">
@@ -282,6 +325,16 @@
 		
     <div id="zoom_block">
         <input type="hidden" id="cur_zoom" value="1">
+        <div id="aim" class="zoom aim">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 469.333 469.333" style="enable-background:new 0 0 469.333 469.333;" xml:space="preserve">
+        <path d="M234.667,149.333c-47.147,0-85.333,38.187-85.333,85.333S187.52,320,234.667,320S320,281.813,320,234.667
+            S281.813,149.333,234.667,149.333z M425.387,213.333C415.573,124.373,344.96,53.76,256,43.947V0h-42.667v43.947
+            C124.373,53.76,53.76,124.373,43.947,213.333H0V256h43.947c9.813,88.96,80.427,159.573,169.387,169.387v43.947H256v-43.947
+            C344.96,415.573,415.573,344.96,425.387,256h43.947v-42.667H425.387L425.387,213.333z M234.667,384
+            c-82.453,0-149.333-66.88-149.333-149.333s66.88-149.333,149.333-149.333S384,152.213,384,234.667S317.12,384,234.667,384z"/>
+        </svg>
+        </div>
         <div id="ZoomIn" class="zoom">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.2197 2.97693V21.844" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>

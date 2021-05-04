@@ -5,7 +5,7 @@ var currentShape
 $(document).ready(function () {
 
     //карта по умолчанию
-    var def = '<div id="work_place" class="v1vin" style="position: relative; background-color: rgb(210, 196, 167); left: 0px; top: 0px; width: 100%; height: 100%;"><div class="vin" id="v1"></div><div id="center_aling"></div></div>';
+    var def = '<div id="work_place" class="v1vin" style="position: relative; background-color: rgb(210, 196, 167); left: 0px; top: 0px; width: 100%; height: 100%; transform: scale(0.694444, 0.694444);"><div class="vin" id="v1"></div><div id="center_aling"></div></div>';
 
     $("#main_work_screen").html(def);
 
@@ -75,23 +75,9 @@ $(document).ready(function () {
             $("#work_place").css("width", data.work_place_width);
             $("#work_place").css("height", data.work_place_height);
 
-            const SCREEN_HEIGHT = window.innerHeight
-            const SCREEN_WIDTH = window.innerWidth
-            const area = document.getElementById('work_place')
-            const areaHeight = area.offsetHeight
-            const areaWidth = area.offsetWidth
-            const hRatio = SCREEN_HEIGHT / areaHeight
-            const wRatio = SCREEN_WIDTH / areaWidth
+            
+			resizeScreen()
 
-            const scaleRatio = (hRatio > wRatio ? wRatio : hRatio) / 1.2
-            $("#cur_zoom").val(scaleRatio)
-
-
-            area.style.transform = `scale(${scaleRatio}, ${scaleRatio})`
-            area.style.left = (SCREEN_WIDTH - areaWidth * scaleRatio) / 2
-            area.style.top = ((SCREEN_HEIGHT + 72) - areaHeight * scaleRatio) / 2
-            area.style.transformOrigin = 'top left'
-            area.style.cursor = 'grab'
 
             var tables_count = data.tables.table_id.length; //количество столов
 
@@ -138,10 +124,10 @@ $(document).ready(function () {
             var c_count = data.tables.chairs.chair_id.length; //количество стульев
 
             for (var j = 0; j < c_count; j++) {
-                $('.txtarea.stul_guest_name').eq(j).val(`${data.tables.chairs.str1[j]}  ${data.tables.chairs.str2[j]}`);
-                $('div.stul_guest_name').eq(j).text(`${data.tables.chairs.str1[j]}  ${data.tables.chairs.str2[j]}`);
+                $('.txtarea.stul_guest_name').eq(j).val(`${data.tables.chairs.str1[j]}`);
+                $('div.stul_guest_name').eq(j).text(`${data.tables.chairs.str1[j]}`);
                 $('.input_name').eq(j).val(data.tables.chairs.str1[j]);
-                $('.input_family').eq(j).val(data.tables.chairs.str2[j]);
+                //$('.input_family').eq(j).val(data.tables.chairs.str2[j]);
             }
 
         });
@@ -195,12 +181,13 @@ $(document).ready(function () {
         }).get();
         //строка1
         var str1 = $('.stul_guest_name').map(function () {
-            return this.value || this.innerText
+            return this.value || this.innerText;
         }).get();
+		
         //строка2
         var str2 = $('.input_family').map(function () {
             return this.value;
-        }).get();
+        }).get(); 
 
         var params = {
             header: header__title,
@@ -228,7 +215,7 @@ $(document).ready(function () {
         var data = JSON.stringify(params);
 
         if ($("#logout").html()) {
-
+			/*	
             $.ajax({
                 type: 'POST',
                 url: 'save/sendmail.php',
@@ -236,7 +223,8 @@ $(document).ready(function () {
                     alert("Письмо отправлено: " + data);
                 }
             });
-
+			*/
+			
             if (actual == "actual") {
                 $.ajax({
                     type: 'POST',
@@ -353,6 +341,15 @@ $(document).ready(function () {
 
             }
         });
+		
+		$.ajax({
+        	type: 'POST',
+            url: 'save/sendmail.php',
+            success: function (data) {
+                alert("Письмо отправлено: " + data);
+            }
+        });
+		
         return false;
     });
 
@@ -443,6 +440,11 @@ $(document).ready(function () {
         $('.options').css("display", "none");
         $(".save_btn").css("display", "none");
         $("#delete_btn").css("display", "none");
+		$(".burger").css("display", "none");
+		$("#zoom_block").css("bottom", "20px");
+		
+		$(".header__actions").append('<div id="create" class="d-flex save_btn"><p>Создать</p></div>');
+		
         $(".header__actions").append('<div id="edit" class="d-flex save_btn"><p>Редактировать</p></div>');
         $("#work_place").resizable().draggable().disableSelection();
 
@@ -450,6 +452,9 @@ $(document).ready(function () {
         $(".input_family").attr("readonly", "readonly");
         $('#header__title').attr('contenteditable', 'false');
         $('#header__subtitle').attr('contenteditable', 'false');
+        setTimeout(function () {
+            $('.stul_edit').hide()
+        }, 100)
     } else if (wlahref == homeloc) { //вход не выполнен рассадка по умолчанию
         $("#center_aling").html(def_tables);
         $(".ui-resizable-handle").remove();
@@ -459,7 +464,11 @@ $(document).ready(function () {
 
         $(".share_btn").css("display", "none");
     }
-
+	
+	$("#create").click(function () {
+        window.location.href = "https://xn-----6kcaabbihpgn0d3bzbrai6s.xn--p1ai/";
+    });
+	
     //редактировать рассадку
 
     $("#edit").click(function () {
@@ -802,12 +811,11 @@ $(document).ready(function () {
 
     }
 
-
-
-
 });
 
-
+window.addEventListener("resize", function() {
+   resizeScreen()
+}, false);
 
 jQuery(document).on('touchstart', 'input[type=text]', function () { $(this).focus() })
 
@@ -841,6 +849,13 @@ function zoomOutFn() {
 }
 
 $(document).on('click', "#ZoomIn", zoomInFn);
+$(document).on('click', "#aim", function () {
+	resizeScreen()
+	$('.aim').removeClass('animate').addClass('animate')
+    setTimeout(function () {
+        $('.aim').removeClass('animate')
+    }, 100)
+});
 $(document).on('click', "#ZoomOut", zoomOutFn);
 
 
@@ -1505,6 +1520,24 @@ function generateSquareTable(x) {
     `
 }
 
+function resizeScreen() {
+	const SCREEN_HEIGHT = window.innerHeight
+    const SCREEN_WIDTH = window.innerWidth
+    const area = document.getElementById('work_place')
+    const areaHeight = area.offsetHeight
+    const areaWidth = area.offsetWidth
+    const hRatio = SCREEN_HEIGHT / areaHeight
+    const wRatio = SCREEN_WIDTH / areaWidth
+
+    const scaleRatio = (hRatio > wRatio ? wRatio : hRatio) / 1.2
+    $("#cur_zoom").val(scaleRatio)
+
+    area.style.transform = `scale(${scaleRatio}, ${scaleRatio})`
+    area.style.left = (SCREEN_WIDTH - areaWidth * scaleRatio) / 2
+    area.style.top = ((SCREEN_HEIGHT + 72) - areaHeight * scaleRatio) / 2
+    area.style.transformOrigin = 'top left'
+    area.style.cursor = 'grab'
+}
 
 function showLoginScreen() {
     $("#pop_up").fadeIn(300)
